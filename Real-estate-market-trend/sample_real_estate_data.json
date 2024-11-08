@@ -1,0 +1,57 @@
+[
+    {
+        "Property_ID":"J001",
+        "Location":"Miami",
+        "Price":700000,
+        "Bedrooms":3,
+        "Bathrooms":2,
+        "Square_Feet":1600,
+        "Year_Built":2016,
+        "Property_Type":"Condo",
+        "Listing_Status":"For Sale"
+    },
+    {
+        "Property_ID":"J002",
+        "Location":"Orlando",
+        "Price":650000,
+        "Bedrooms":4,
+        "Bathrooms":3,
+        "Square_Feet":2100,
+        "Year_Built":2018,
+        "Property_Type":"Single Family",
+        "Listing_Status":"For Rent"
+    },
+    {
+        "Property_ID":"J003",
+        "Location":"Tampa",
+        "Price":500000,
+        "Bedrooms":2,
+        "Bathrooms":1,
+        "Square_Feet":1200,
+        "Year_Built":2011,
+        "Property_Type":"Townhouse",
+        "Listing_Status":"Sold"
+    },
+    {
+        "Property_ID":"J004",
+        "Location":"Naples",
+        "Price":800000,
+        "Bedrooms":5,
+        "Bathrooms":4,
+        "Square_Feet":2500,
+        "Year_Built":2020,
+        "Property_Type":"Single Family",
+        "Listing_Status":"For Sale"
+    },
+    {
+        "Property_ID":"J005",
+        "Location":"Jacksonville",
+        "Price":600000,
+        "Bedrooms":3,
+        "Bathrooms":2,
+        "Square_Feet":1700,
+        "Year_Built":2015,
+        "Property_Type":"Condo",
+        "Listing_Status":"For Rent"
+    }
+]

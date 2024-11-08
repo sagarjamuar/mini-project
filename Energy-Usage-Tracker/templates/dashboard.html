@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Tracker Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Energy Usage and Carbon Footprint Dashboard</h2>
+        <h3>Data Visualizations</h3>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Energy Consumption Over Time</h4>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Carbon Emissions by Location</h4>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <a href="{{ url_for('logout') }}" class="btn btn-danger mt-4">Logout</a>
+    </div>
+
+    <script>
+        function fetchData(url, chart) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    chart.data.labels = data.labels;
+                    chart.data.datasets[0].data = data.data;
+                    chart.update();
+                });
+        }
+
+        const lineChart = new Chart(document.getElementById('lineChart'), {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Average Energy (kWh)',
+                    data: [],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            }
+        });
+        fetchData("/data/energy_over_time", lineChart);
+
+        const barChart = new Chart(document.getElementById('barChart'), {
+            type: 'bar',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Carbon Emissions (kgCO2e)',
+                    data: [],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            }
+        });
+        fetchData("/data/carbon_emissions_distribution", barChart);
+    </script>
+</body>
+</html>

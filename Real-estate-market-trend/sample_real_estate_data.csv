@@ -1,0 +1,21 @@
+Property_ID,Location,Price,Bedrooms,Bathrooms,Square_Feet,Year_Built,Property_Type,Listing_Status
+P001,New York,850000,3,2,1800,2015,Single Family,For Sale
+P002,Los Angeles,920000,4,3,2200,2018,Condo,Sold
+P003,Chicago,450000,2,1,1200,2008,Townhouse,For Sale
+P004,Houston,610000,3,2,1600,2012,Single Family,For Rent
+P005,Phoenix,540000,3,2,1500,2013,Single Family,For Sale
+P006,Philadelphia,520000,2,1,1400,2010,Condo,For Sale
+P007,San Antonio,460000,3,2,1300,2011,Single Family,Sold
+P008,San Diego,780000,4,3,2000,2017,Single Family,For Sale
+P009,Dallas,640000,4,2,1750,2016,Townhouse,For Rent
+P010,San Jose,900000,5,3,2500,2020,Single Family,Sold
+P011,Austin,670000,3,2,1800,2014,Single Family,For Sale
+P012,Jacksonville,410000,3,2,1250,2009,Condo,For Sale
+P013,Fort Worth,500000,4,2,1550,2011,Single Family,For Rent
+P014,Columbus,430000,3,1,1300,2012,Townhouse,Sold
+P015,Charlotte,530000,2,1,1450,2013,Condo,For Sale
+P016,San Francisco,1200000,4,3,3000,2019,Single Family,For Sale
+P017,Indianapolis,470000,3,2,1400,2012,Townhouse,For Sale
+P018,Seattle,750000,3,2,1900,2015,Single Family,For Rent
+P019,Denver,590000,4,3,1700,2011,Single Family,Sold
+P020,Washington,1100000,5,4,2800,2021,Condo,For Sale

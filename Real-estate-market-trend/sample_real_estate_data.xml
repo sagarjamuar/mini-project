@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+  <row>
+    <Property_ID>X001</Property_ID>
+    <Location>Boston</Location>
+    <Price>750000</Price>
+    <Bedrooms>4</Bedrooms>
+    <Bathrooms>2</Bathrooms>
+    <Square_Feet>2000</Square_Feet>
+    <Year_Built>2010</Year_Built>
+    <Property_Type>Single Family</Property_Type>
+    <Listing_Status>For Sale</Listing_Status>
+  </row>
+  <row>
+    <Property_ID>X002</Property_ID>
+    <Location>Cambridge</Location>
+    <Price>820000</Price>
+    <Bedrooms>3</Bedrooms>
+    <Bathrooms>2</Bathrooms>
+    <Square_Feet>1700</Square_Feet>
+    <Year_Built>2012</Year_Built>
+    <Property_Type>Condo</Property_Type>
+    <Listing_Status>Sold</Listing_Status>
+  </row>
+  <row>
+    <Property_ID>X003</Property_ID>
+    <Location>Worcester</Location>
+    <Price>460000</Price>
+    <Bedrooms>3</Bedrooms>
+    <Bathrooms>1</Bathrooms>
+    <Square_Feet>1500</Square_Feet>
+    <Year_Built>2013</Year_Built>
+    <Property_Type>Townhouse</Property_Type>
+    <Listing_Status>For Rent</Listing_Status>
+  </row>
+  <row>
+    <Property_ID>X004</Property_ID>
+    <Location>Springfield</Location>
+    <Price>690000</Price>
+    <Bedrooms>3</Bedrooms>
+    <Bathrooms>3</Bathrooms>
+    <Square_Feet>1800</Square_Feet>
+    <Year_Built>2017</Year_Built>
+    <Property_Type>Single Family</Property_Type>
+    <Listing_Status>For Sale</Listing_Status>
+  </row>
+  <row>
+    <Property_ID>X005</Property_ID>
+    <Location>Lowell</Location>
+    <Price>540000</Price>
+    <Bedrooms>2</Bedrooms>
+    <Bathrooms>2</Bathrooms>
+    <Square_Feet>1300</Square_Feet>
+    <Year_Built>2014</Year_Built>
+    <Property_Type>Townhouse</Property_Type>
+    <Listing_Status>For Sale</Listing_Status>
+  </row>
+</data>

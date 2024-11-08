@@ -1,0 +1,287 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Dashboard</title>-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container mt-5">-->
+<!--        <h2>Welcome to the Dashboard</h2>-->
+
+<!--        {% if session.get('is_admin') %}-->
+<!--            <p>You are logged in as an Admin.</p>-->
+<!--            <a href="{{ url_for('fetch_data') }}" class="btn btn-primary">Fetch and Store Data</a>-->
+<!--        {% endif %}-->
+
+<!--        <h3>Data Visualizations</h3>-->
+
+<!--        &lt;!&ndash; Line Chart for Housing Prices Over Time &ndash;&gt;-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <h4>Housing Prices Over Time</h4>-->
+<!--                <canvas id="lineChart"></canvas>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Bar Chart for Property Types Distribution &ndash;&gt;-->
+<!--            <div class="col-md-6">-->
+<!--                <h4>Property Types Distribution</h4>-->
+<!--                <canvas id="barChart"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Pie Chart for Sales Pattern &ndash;&gt;-->
+<!--        <div class="row mt-4">-->
+<!--            <div class="col-md-6">-->
+<!--                <h4>Sales Pattern</h4>-->
+<!--                <canvas id="pieChart"></canvas>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Scatter Plot for Price vs Square Feet &ndash;&gt;-->
+<!--            <div class="col-md-6">-->
+<!--                <h4>Price vs Square Feet</h4>-->
+<!--                <canvas id="scatterChart"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Heatmap (Approximated with Bar Chart for Regional Sales) &ndash;&gt;-->
+<!--        <div class="row mt-4">-->
+<!--            <div class="col-md-12">-->
+<!--                <h4>Regional Sales Heatmap</h4>-->
+<!--                <canvas id="heatmapChart"></canvas>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <a href="{{ url_for('logout') }}" class="btn btn-danger mt-4">Logout</a>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Chart.js Scripts for Visualizations &ndash;&gt;-->
+<!--    <script>-->
+<!--        // Function to fetch data and render a chart-->
+<!--        function fetchData(url, chart) {-->
+<!--            fetch(url)-->
+<!--                .then(response => response.json())-->
+<!--                .then(data => {-->
+<!--                    chart.data.labels = data.labels;-->
+<!--                    chart.data.datasets[0].data = data.data;-->
+<!--                    chart.update();-->
+<!--                });-->
+<!--        }-->
+
+<!--        // Line Chart - Housing Prices Over Time-->
+<!--        const lineChart = new Chart(document.getElementById('lineChart'), {-->
+<!--            type: 'line',-->
+<!--            data: {-->
+<!--                labels: [],-->
+<!--                datasets: [{-->
+<!--                    label: 'Average Price',-->
+<!--                    data: [],-->
+<!--                    borderColor: 'rgba(75, 192, 192, 1)',-->
+<!--                    fill: false-->
+<!--                }]-->
+<!--            }-->
+<!--        });-->
+<!--        fetchData("/data/price_over_time", lineChart);-->
+
+<!--        // Bar Chart - Property Types Distribution-->
+<!--        const barChart = new Chart(document.getElementById('barChart'), {-->
+<!--            type: 'bar',-->
+<!--            data: {-->
+<!--                labels: [],-->
+<!--                datasets: [{-->
+<!--                    label: 'Properties',-->
+<!--                    data: [],-->
+<!--                    backgroundColor: 'rgba(54, 162, 235, 0.2)',-->
+<!--                    borderColor: 'rgba(54, 162, 235, 1)',-->
+<!--                    borderWidth: 1-->
+<!--                }]-->
+<!--            }-->
+<!--        });-->
+<!--        fetchData("/data/property_type_distribution", barChart);-->
+
+<!--        // Pie Chart - Sales Pattern-->
+<!--        const pieChart = new Chart(document.getElementById('pieChart'), {-->
+<!--            type: 'pie',-->
+<!--            data: {-->
+<!--                labels: [],-->
+<!--                datasets: [{-->
+<!--                    data: [],-->
+<!--                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']-->
+<!--                }]-->
+<!--            }-->
+<!--        });-->
+<!--        fetchData("/data/sales_pattern", pieChart);-->
+
+<!--        // Scatter Plot - Price vs Square Feet-->
+<!--        fetch("/data/price_vs_square_feet")-->
+<!--            .then(response => response.json())-->
+<!--            .then(data => {-->
+<!--                const scatterChart = new Chart(document.getElementById('scatterChart'), {-->
+<!--                    type: 'scatter',-->
+<!--                    data: {-->
+<!--                        datasets: [{-->
+<!--                            label: 'Price vs Square Feet',-->
+<!--                            data: data.data,-->
+<!--                            backgroundColor: 'rgba(255, 99, 132, 1)'-->
+<!--                        }]-->
+<!--                    }-->
+<!--                });-->
+<!--            });-->
+
+<!--        // Heatmap (Approximated with Bar Chart for Regional Sales)-->
+<!--        const heatmapChart = new Chart(document.getElementById('heatmapChart'), {-->
+<!--            type: 'bar',-->
+<!--            data: {-->
+<!--                labels: [],-->
+<!--                datasets: [{-->
+<!--                    label: 'Sales Volume',-->
+<!--                    data: [],-->
+<!--                    backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1'],-->
+<!--                }]-->
+<!--            }-->
+<!--        });-->
+<!--        fetchData("/data/region_sales_heatmap", heatmapChart);-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Welcome to the Dashboard</h2>
+
+        {% if session.get('is_admin') %}
+            <p>You are logged in as an Admin.</p>
+            <a href="{{ url_for('fetch_data') }}" class="btn btn-primary">Fetch and Store Data</a>
+        {% endif %}
+
+        <!-- Filter Form -->
+        <h3>Filter Data</h3>
+        <form id="filterForm" class="mb-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="yearRange">Year Range</label>
+                    <input type="text" class="form-control" id="yearRange" placeholder="e.g., 2000-2022">
+                </div>
+                <div class="col-md-3">
+                    <label for="propertyType">Property Type</label>
+                    <select id="propertyType" class="form-control">
+                        <option value="">All</option>
+                        <option value="Single Family">Single Family</option>
+                        <option value="Condo">Condo</option>
+                        <option value="Townhouse">Townhouse</option>
+                    </select>
+                </div>
+                <div class="col-md-3 align-self-end">
+                    <button type="button" class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+                </div>
+            </div>
+        </form>
+
+        <h3>Data Visualizations</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Housing Prices Over Time</h4>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Property Types Distribution</h4>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h4>Sales Pattern</h4>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <h4>Price vs Square Feet</h4>
+                <canvas id="scatterChart"></canvas>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h4>Regional Sales Heatmap</h4>
+                <canvas id="heatmapChart"></canvas>
+            </div>
+        </div>
+
+        <a href="{{ url_for('logout') }}" class="btn btn-danger mt-4">Logout</a>
+    </div>
+
+    <!-- JavaScript for Chart Rendering and Filtering -->
+    <script>
+        function fetchData(url, chart) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    chart.data.labels = data.labels;
+                    chart.data.datasets[0].data = data.data;
+                    chart.update();
+                });
+        }
+
+        // Apply Filters Function
+        function applyFilters() {
+            const yearRange = document.getElementById('yearRange').value;
+            const propertyType = document.getElementById('propertyType').value;
+
+            fetchData(`/data/price_over_time?year_range=${yearRange}`, lineChart);
+            fetchData(`/data/property_type_distribution?property_type=${propertyType}`, barChart);
+            fetchData("/data/sales_pattern", pieChart);
+            fetchData("/data/price_vs_square_feet", scatterChart);
+            fetchData("/data/region_sales_heatmap", heatmapChart);
+        }
+
+        // Line Chart - Housing Prices Over Time
+        const lineChart = new Chart(document.getElementById('lineChart'), {
+            type: 'line',
+            data: { labels: [], datasets: [{ label: 'Average Price', data: [], borderColor: 'rgba(75, 192, 192, 1)', fill: false }] }
+        });
+        fetchData("/data/price_over_time", lineChart);
+
+        // Bar Chart - Property Types Distribution
+        const barChart = new Chart(document.getElementById('barChart'), {
+            type: 'bar',
+            data: { labels: [], datasets: [{ label: 'Properties', data: [], backgroundColor: 'rgba(54, 162, 235, 0.2)', borderColor: 'rgba(54, 162, 235, 1)', borderWidth: 1 }] }
+        });
+        fetchData("/data/property_type_distribution", barChart);
+
+        // Pie Chart - Sales Pattern
+        const pieChart = new Chart(document.getElementById('pieChart'), {
+            type: 'pie',
+            data: { labels: [], datasets: [{ data: [], backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'] }] }
+        });
+        fetchData("/data/sales_pattern", pieChart);
+
+        // Scatter Plot - Price vs Square Feet
+        fetch("/data/price_vs_square_feet")
+            .then(response => response.json())
+            .then(data => {
+                const scatterChart = new Chart(document.getElementById('scatterChart'), {
+                    type: 'scatter',
+                    data: { datasets: [{ label: 'Price vs Square Feet', data: data.data, backgroundColor: 'rgba(255, 99, 132, 1)' }] }
+                });
+            });
+
+        // Heatmap - Regional Sales
+        const heatmapChart = new Chart(document.getElementById('heatmapChart'), {
+            type: 'bar',
+            data: { labels: [], datasets: [{ label: 'Sales Volume', data: [], backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1'] }] }
+        });
+        fetchData("/data/region_sales_heatmap", heatmapChart);
+    </script>
+</body>
+</html>

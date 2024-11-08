@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+  <row>
+    <Device_ID>D1</Device_ID>
+    <Location>Building A</Location>
+    <Energy_Consumption_kWh>200.5</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>40.1</Carbon_Emissions_kgCO2e>
+    <Date>2023-01-31</Date>
+  </row>
+  <row>
+    <Device_ID>D2</Device_ID>
+    <Location>Building B</Location>
+    <Energy_Consumption_kWh>150.3</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>30.5</Carbon_Emissions_kgCO2e>
+    <Date>2023-02-28</Date>
+  </row>
+  <row>
+    <Device_ID>D3</Device_ID>
+    <Location>Building C</Location>
+    <Energy_Consumption_kWh>180.6</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>36.2</Carbon_Emissions_kgCO2e>
+    <Date>2023-03-31</Date>
+  </row>
+  <row>
+    <Device_ID>D4</Device_ID>
+    <Location>Building D</Location>
+    <Energy_Consumption_kWh>210.7</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>42.1</Carbon_Emissions_kgCO2e>
+    <Date>2023-04-30</Date>
+  </row>
+  <row>
+    <Device_ID>D5</Device_ID>
+    <Location>Building E</Location>
+    <Energy_Consumption_kWh>165.8</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>33.2</Carbon_Emissions_kgCO2e>
+    <Date>2023-05-31</Date>
+  </row>
+  <row>
+    <Device_ID>D6</Device_ID>
+    <Location>Building A</Location>
+    <Energy_Consumption_kWh>140.2</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>28.4</Carbon_Emissions_kgCO2e>
+    <Date>2023-06-30</Date>
+  </row>
+  <row>
+    <Device_ID>D7</Device_ID>
+    <Location>Building B</Location>
+    <Energy_Consumption_kWh>175.0</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>35.1</Carbon_Emissions_kgCO2e>
+    <Date>2023-07-31</Date>
+  </row>
+  <row>
+    <Device_ID>D8</Device_ID>
+    <Location>Building C</Location>
+    <Energy_Consumption_kWh>195.1</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>39.0</Carbon_Emissions_kgCO2e>
+    <Date>2023-08-31</Date>
+  </row>
+  <row>
+    <Device_ID>D9</Device_ID>
+    <Location>Building D</Location>
+    <Energy_Consumption_kWh>155.9</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>31.1</Carbon_Emissions_kgCO2e>
+    <Date>2023-09-30</Date>
+  </row>
+  <row>
+    <Device_ID>D10</Device_ID>
+    <Location>Building E</Location>
+    <Energy_Consumption_kWh>170.4</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>34.0</Carbon_Emissions_kgCO2e>
+    <Date>2023-10-31</Date>
+  </row>
+  <row>
+    <Device_ID>D11</Device_ID>
+    <Location>Building A</Location>
+    <Energy_Consumption_kWh>182.3</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>36.5</Carbon_Emissions_kgCO2e>
+    <Date>2023-11-30</Date>
+  </row>
+  <row>
+    <Device_ID>D12</Device_ID>
+    <Location>Building B</Location>
+    <Energy_Consumption_kWh>210.5</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>42.0</Carbon_Emissions_kgCO2e>
+    <Date>2023-12-31</Date>
+  </row>
+  <row>
+    <Device_ID>D13</Device_ID>
+    <Location>Building C</Location>
+    <Energy_Consumption_kWh>190.6</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>38.1</Carbon_Emissions_kgCO2e>
+    <Date>2024-01-31</Date>
+  </row>
+  <row>
+    <Device_ID>D14</Device_ID>
+    <Location>Building D</Location>
+    <Energy_Consumption_kWh>160.2</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>32.1</Carbon_Emissions_kgCO2e>
+    <Date>2024-02-29</Date>
+  </row>
+  <row>
+    <Device_ID>D15</Device_ID>
+    <Location>Building E</Location>
+    <Energy_Consumption_kWh>145.7</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>29.3</Carbon_Emissions_kgCO2e>
+    <Date>2024-03-31</Date>
+  </row>
+  <row>
+    <Device_ID>D16</Device_ID>
+    <Location>Building A</Location>
+    <Energy_Consumption_kWh>200.1</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>40.2</Carbon_Emissions_kgCO2e>
+    <Date>2024-04-30</Date>
+  </row>
+  <row>
+    <Device_ID>D17</Device_ID>
+    <Location>Building B</Location>
+    <Energy_Consumption_kWh>150.4</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>30.5</Carbon_Emissions_kgCO2e>
+    <Date>2024-05-31</Date>
+  </row>
+  <row>
+    <Device_ID>D18</Device_ID>
+    <Location>Building C</Location>
+    <Energy_Consumption_kWh>185.3</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>37.2</Carbon_Emissions_kgCO2e>
+    <Date>2024-06-30</Date>
+  </row>
+  <row>
+    <Device_ID>D19</Device_ID>
+    <Location>Building D</Location>
+    <Energy_Consumption_kWh>210.0</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>42.0</Carbon_Emissions_kgCO2e>
+    <Date>2024-07-31</Date>
+  </row>
+  <row>
+    <Device_ID>D20</Device_ID>
+    <Location>Building E</Location>
+    <Energy_Consumption_kWh>175.6</Energy_Consumption_kWh>
+    <Carbon_Emissions_kgCO2e>35.0</Carbon_Emissions_kgCO2e>
+    <Date>2024-08-31</Date>
+  </row>
+</data>
